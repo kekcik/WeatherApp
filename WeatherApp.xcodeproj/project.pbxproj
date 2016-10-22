@@ -15,6 +15,7 @@
 		AF56FEE51DB53A6700B7FE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF56FEE31DB53A6700B7FE25 /* LaunchScreen.storyboard */; };
 		AF760DC51DBBB9C7001CCB1F /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF760DC41DBBB9C7001CCB1F /* WeatherForecast.swift */; };
 		AF760DC71DBBDC6F001CCB1F /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */; };
+		AF760DC91DBC056C001CCB1F /* ApiKeyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF760DC81DBC056C001CCB1F /* ApiKeyHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AF56FEE61DB53A6700B7FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF760DC41DBBB9C7001CCB1F /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
+		AF760DC81DBC056C001CCB1F /* ApiKeyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeyHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */,
+				AF760DC81DBC056C001CCB1F /* ApiKeyHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				AF56FEDD1DB53A6700B7FE25 /* TravelViewController.swift in Sources */,
 				AF760DC71DBBDC6F001CCB1F /* WeatherHelper.swift in Sources */,
+				AF760DC91DBC056C001CCB1F /* ApiKeyHelper.swift in Sources */,
 				AF56FED91DB53A6700B7FE25 /* AppDelegate.swift in Sources */,
 				AF56FEDB1DB53A6700B7FE25 /* HomeViewController.swift in Sources */,
 				AF760DC51DBBB9C7001CCB1F /* WeatherForecast.swift in Sources */,
@@ -307,10 +311,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SWW93MKD;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimov.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,10 +326,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SWW93MKD;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimov.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
