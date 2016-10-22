@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  TravelViewController.swift
 //  WeatherApp
 //
 //  Created by Иван Трофимов on 17.10.16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TravelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

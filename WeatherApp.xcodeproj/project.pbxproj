@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AF56FED91DB53A6700B7FE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56FED81DB53A6700B7FE25 /* AppDelegate.swift */; };
-		AF56FEDB1DB53A6700B7FE25 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56FEDA1DB53A6700B7FE25 /* FirstViewController.swift */; };
-		AF56FEDD1DB53A6700B7FE25 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56FEDC1DB53A6700B7FE25 /* SecondViewController.swift */; };
+		AF56FEDB1DB53A6700B7FE25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56FEDA1DB53A6700B7FE25 /* HomeViewController.swift */; };
+		AF56FEDD1DB53A6700B7FE25 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56FEDC1DB53A6700B7FE25 /* TravelViewController.swift */; };
 		AF56FEE01DB53A6700B7FE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF56FEDE1DB53A6700B7FE25 /* Main.storyboard */; };
 		AF56FEE21DB53A6700B7FE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF56FEE11DB53A6700B7FE25 /* Assets.xcassets */; };
 		AF56FEE51DB53A6700B7FE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF56FEE31DB53A6700B7FE25 /* LaunchScreen.storyboard */; };
+		AF760DC51DBBB9C7001CCB1F /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF760DC41DBBB9C7001CCB1F /* WeatherForecast.swift */; };
+		AF760DC71DBBDC6F001CCB1F /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF56FED51DB53A6700B7FE25 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF56FED81DB53A6700B7FE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF56FEDA1DB53A6700B7FE25 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		AF56FEDC1DB53A6700B7FE25 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AF56FEDA1DB53A6700B7FE25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AF56FEDC1DB53A6700B7FE25 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
 		AF56FEDF1DB53A6700B7FE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF56FEE11DB53A6700B7FE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF56FEE41DB53A6700B7FE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF56FEE61DB53A6700B7FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF760DC41DBBB9C7001CCB1F /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
+		AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		AF56FED71DB53A6700B7FE25 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF56FED81DB53A6700B7FE25 /* AppDelegate.swift */,
-				AF56FEDA1DB53A6700B7FE25 /* FirstViewController.swift */,
-				AF56FEDC1DB53A6700B7FE25 /* SecondViewController.swift */,
+				AF760DC31DBBB997001CCB1F /* Models */,
+				AF760DC21DBBB992001CCB1F /* Helpers */,
+				AF760DC01DBBB925001CCB1F /* Magic */,
+				AF760DBF1DBBB7AA001CCB1F /* ViewControllers */,
 				AF56FEDE1DB53A6700B7FE25 /* Main.storyboard */,
+			);
+			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		AF760DBF1DBBB7AA001CCB1F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF56FEDA1DB53A6700B7FE25 /* HomeViewController.swift */,
+				AF56FEDC1DB53A6700B7FE25 /* TravelViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AF760DC01DBBB925001CCB1F /* Magic */ = {
+			isa = PBXGroup;
+			children = (
+				AF56FED81DB53A6700B7FE25 /* AppDelegate.swift */,
 				AF56FEE11DB53A6700B7FE25 /* Assets.xcassets */,
 				AF56FEE31DB53A6700B7FE25 /* LaunchScreen.storyboard */,
 				AF56FEE61DB53A6700B7FE25 /* Info.plist */,
 			);
-			path = WeatherApp;
+			name = Magic;
+			sourceTree = "<group>";
+		};
+		AF760DC21DBBB992001CCB1F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF760DC61DBBDC6F001CCB1F /* WeatherHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AF760DC31DBBB997001CCB1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF760DC41DBBB9C7001CCB1F /* WeatherForecast.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF56FEDD1DB53A6700B7FE25 /* SecondViewController.swift in Sources */,
+				AF56FEDD1DB53A6700B7FE25 /* TravelViewController.swift in Sources */,
+				AF760DC71DBBDC6F001CCB1F /* WeatherHelper.swift in Sources */,
 				AF56FED91DB53A6700B7FE25 /* AppDelegate.swift in Sources */,
-				AF56FEDB1DB53A6700B7FE25 /* FirstViewController.swift in Sources */,
+				AF56FEDB1DB53A6700B7FE25 /* HomeViewController.swift in Sources */,
+				AF760DC51DBBB9C7001CCB1F /* WeatherForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +346,7 @@
 				AF56FEEB1DB53A6700B7FE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
