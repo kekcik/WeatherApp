@@ -12,18 +12,18 @@ import UIKit
 class WeatherForecast {
     let cityName: String
     let currentTemperature: Double?
-    let rainProbability: Double?
-    let timestamp: Double?
+    let rainProbability: Int?
+    let sunTime: (Int, Int)?
     let imageName: String
-    let locationCoordinates: (Double, Double)?
+    let wind: (Double, Double)?
     
-    init (cityName: String, currentTemperature: Double?, rainProbability: Double?, timestamp: Double?, imageName: String, locationCoordinates: (Double, Double)?
+    init (cityName: String, currentTemperature: Double?, rainProbability: Int?, sunTime: (Int, Int)?, imageName: String, wind: (Double, Double)?
         ) {
         self.cityName = cityName
         self.currentTemperature = currentTemperature
         self.rainProbability = rainProbability
-        self.timestamp = timestamp
+        self.sunTime = sunTime
         self.imageName = imageName
-        self.locationCoordinates = locationCoordinates
+        self.wind = wind
     }
 }

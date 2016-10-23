@@ -9,8 +9,8 @@
 import Foundation
 
 class HourForecast {
-    let arrayForecast: Array<Double>
-    init (arrayForecast: Array<Double>) {
+    let arrayForecast: [WeatherForecast]
+    init (arrayForecast: [WeatherForecast]) {
         self.arrayForecast = arrayForecast
     }
 }
