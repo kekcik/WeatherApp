@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class WeatherForecast {
     let cityName: String
     let currentTemperature: Double?
