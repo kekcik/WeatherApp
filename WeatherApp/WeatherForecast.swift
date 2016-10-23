@@ -7,16 +7,21 @@
 //
 
 import Foundation
+import UIKit
+
 
 class WeatherForecast {
-    let currentWeatherTemperature: Double?
+    let cityName: String
+    let currentTemperature: Double?
     let rainProbability: Double?
-    let timestamp: Double
+    let timestamp: Double?
     let imageName: String
     let locationCoordinates: (Double, Double)?
     
-    init(currentWeatherTemperature: Double?, rainProbability: Double?, timestamp: Double, imageName: String, locationCoordinates: (Double, Double)?) {
-        self.currentWeatherTemperature = currentWeatherTemperature
+    init (cityName: String, currentTemperature: Double?, rainProbability: Double?, timestamp: Double?, imageName: String, locationCoordinates: (Double, Double)?
+        ) {
+        self.cityName = cityName
+        self.currentTemperature = currentTemperature
         self.rainProbability = rainProbability
         self.timestamp = timestamp
         self.imageName = imageName

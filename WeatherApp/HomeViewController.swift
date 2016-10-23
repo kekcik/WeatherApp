@@ -10,21 +10,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var weather = WeatherHelper();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func updateWeather() {
-        print("Start update");
-    }
+    
     var a = 0;
     var curXPosition = 0;
     @IBOutlet weak var magicLabel: UILabel!
+    @IBOutlet weak var currentTemperature: UILabel!
     @IBAction func handleP(_ recognizer: UIPanGestureRecognizer) {
         a += 1;
         let p = recognizer.translation(in: self.view);
@@ -45,6 +46,16 @@ class HomeViewController: UIViewController {
         } else if (sender.direction.rawValue == 4){
             updateWeather();
         }
+    }
+    func updateWeather() {
+        print("Start update");
+        var weather = WeatherHelper.getWeatherFor(city: "Saint Petersburg");
+        if (weather != nil) {
+            magicLabel.text = "Weather is update"
+            currentTemperature.text = "\(Double(Int(weather!.currentTemperature!*10 - 2731.5))/10)º"
+        }
+       // let weather = WeatherHelper.getWeatherFor(city: "Moscow");
+       // currentTemperature.text = "\( (weather?.currentTemperature)! - 273.15)º"
     }
 }
 
