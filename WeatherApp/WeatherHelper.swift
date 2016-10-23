@@ -89,12 +89,4 @@ class WeatherHelper {
         })
         while (weather == nil) {/*print("wait")*/}
         return weather;
-    }
-    static func getHourWeatherFor(city: String) -> HourForecast? {
-//        let weatherUrl = "http://api.openweathermap.org/data/2.5/forecast";
-//        let params = ["q": city, "APPID": keys.openWeatherMapApiKye]
-//        
-        //return HourForecast.init(arrayForecast: [5.2,4.6,4.4,5,5.1,5.2,6.7,8])
-        return nil;
-    }
-}
+    }}

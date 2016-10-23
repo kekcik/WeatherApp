@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     }
     func setData(temperatur: Double?, sunTime: (Int, Int)?, rainProbability: Int?, city: String?, iconName: String?, wind: (Double, Double)?) {
         if (temperatur != nil) {
-            currentTemperature.text = "\(Double(Int(temperatur!*10 - 2731.5))/10)º"
+            currentTemperature.text = "\(Int(temperatur! - 273.15))º"
         }
         if (sunTime != nil) {
             let dayTimePeriodFormatter = DateFormatter()
@@ -79,12 +79,13 @@ class HomeViewController: UIViewController {
                 curHour = tempHour
                 tempHour = (tempHour / 3);
                 if (tempHour == 0) {
-                    updateWeather();
-                    magicLabel.text = "Magic Label"
+                    //updateWeather();
+                    setData(temperatur: weather?.currentTemperature, sunTime: weather?.sunTime, rainProbability: weather?.rainProbability, city: weather?.cityName, iconName: weather?.imageName, wind: weather?.wind)
+                    magicLabel.text = "Timelapse +0 hour"
                 } else {
                     let a = hourForecast![tempHour - 1];
                     setData(temperatur: a.currentTemperature, sunTime: a.sunTime, rainProbability: a.rainProbability, city: a.cityName, iconName: a.imageName, wind: a.wind)
-                    magicLabel.text = "Timelaps \(curHour)";
+                    magicLabel.text = "Timelaps +\(curHour) hour";
                 }
             }
             print("chg \(a)")
@@ -96,7 +97,7 @@ class HomeViewController: UIViewController {
         if (sender.direction.rawValue == 2) {
             a += 1;
             print("Swipe : \(a)) \(sender.direction)");
-            magicLabel.text = "Magic Label";
+            magicLabel.text = "Timelapse +0 hour";
         } else if (sender.direction.rawValue == 4){
             updateWeather();
         }
@@ -111,6 +112,8 @@ class HomeViewController: UIViewController {
                 city: weather?.cityName,
                 iconName: weather?.imageName,
                 wind: weather?.wind);
+        magicLabel.text = "Weather updated"
+
     }
 }
 
